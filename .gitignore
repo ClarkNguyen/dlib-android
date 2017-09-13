@@ -16,6 +16,8 @@ out/
 # Gradle files
 .gradle/
 build/
+androidstudio-examples/androidstudio-examples/build/
+androidstudio-examples/androidstudio-examples/app/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
