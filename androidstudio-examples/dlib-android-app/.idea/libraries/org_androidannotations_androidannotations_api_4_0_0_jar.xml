@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="androidannotations-api-4.0.0">
+  <library name="org.androidannotations:androidannotations-api:4.0.0@jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/4.0.0/8ef59050fdc527130b8f1f5689164a1ec0ebc13c/androidannotations-api-4.0.0.jar!/" />
     </CLASSES>

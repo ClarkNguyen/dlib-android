@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 27
 
     defaultConfig {
         applicationId "com.tzutalin.dlibtest"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "${rootProject.ext.releaseVersionName}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,9 +24,6 @@ buildscript {
     repositories {
         mavenCentral()
     }
-    dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
-    }
 }
 
 repositories {
@@ -35,16 +31,15 @@ repositories {
     mavenLocal()
 }
 
-apply plugin: 'com.neenbedankt.android-apt'
 def AAVersion = '4.0.0'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:appcompat-v7:${rootProject.ext.androidSupportSdkVersion}"
-    compile 'com.android.support:design:23.3.0'
+    compile "com.android.support:design:${rootProject.ext.androidSupportSdkVersion}"
     compile 'com.github.dexafree:materiallist:3.0.1'
-    compile project(':dlib')
-    apt "org.androidannotations:androidannotations:$AAVersion"
+    implementation project(':dlib')
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 
     // Add AndroidJUnit
